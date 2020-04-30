@@ -12,6 +12,8 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "@types/node": "^13.13.4",
+    "@types/webpack-env": "^1.15.2",
     "webpack-dev-server": "^3.10.3"
   }
 }
