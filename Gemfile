@@ -14,6 +14,7 @@ gem "redis", "~> 4.1.3"
 
 group :development, :test do
   gem "pry", "~> 0.13"
+  gem "rspec-rails", "~> 4.0"
 end
 
 group :development do
