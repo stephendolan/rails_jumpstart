@@ -1,0 +1,28 @@
+version: "3.7"
+
+services:
+  postgres:
+    image: postgres:12-alpine
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - target: 5432
+        published: 5432
+    volumes:
+      - type: volume
+        source: postgres_data_rails_fortress
+        target: /var/lib/postgresql/data
+
+  redis:
+    image: redis:alpine
+    ports:
+      - target: 6379
+        published: 6379
+    volumes:
+      - type: volume
+        source: redis_data_rails_fortress
+        target: /data
+
+volumes:
+  postgres_data_rails_fortress:
+  redis_data_rails_fortress:
