@@ -13,11 +13,7 @@ jobs:
           POSTGRES_PASSWORD: "postgres"
         ports:
           - 5432/tcp
-        options: |
-          --health-cmd pg_isready
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
 
     steps:
       - uses: actions/checkout@v1
@@ -50,8 +46,7 @@ jobs:
           bin/rails db:setup
 
       - name: Lint - StandardRB
-        run: |
-          bundle exec standardrb
+        run: bundle exec standardrb
 
       - name: Run tests
         env:
@@ -59,5 +54,4 @@ jobs:
           PGUSER: postgres
           PGPORT: ${{ job.services.postgres.ports[5432] }}
           RAILS_ENV: test
-        run: |
-          bundle exec rspec
+        run: bundle exec rspec
