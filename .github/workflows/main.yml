@@ -50,9 +50,8 @@ jobs:
           bin/rails db:setup
 
       - name: Lint - StandardRB
-        uses: andrewmcodes/standardrb-action@v0.0.2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          bundle exec standardrb
 
       - name: Run tests
         env:
