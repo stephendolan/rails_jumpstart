@@ -4,8 +4,6 @@ update_configs:
   - package_manager: "javascript"
     directory: "/"
     update_schedule: "live"
-    default_reviewers:
-      - "stephendolan"
     default_assignees:
       - "stephendolan"
     automerged_updates:
@@ -16,8 +14,6 @@ update_configs:
   - package_manager: "ruby:bundler"
     directory: "/"
     update_schedule: "live"
-    default_reviewers:
-      - "stephendolan"
     default_assignees:
       - "stephendolan"
     automerged_updates:
