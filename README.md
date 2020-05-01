@@ -1,24 +1,23 @@
-# README
+# Rails Jumpstart
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repository contains the basic skeleton of a starter Rails app, including:
 
-Things you may want to cover:
+### Production features
 
-* Ruby version
+- [TypeScript](https://www.typescriptlang.org/) for safer JavaScript development
+- [StimulusJS](https://stimulusjs.org) for JavaScript sprinkles
+- [View::Component](https://github.com/github/view_component) for testable views
 
-* System dependencies
+### Test Helpers
 
-* Configuration
+- [RSpec](https://github.com/rspec/rspec-rails)
+  - [FactoryBot](https://github.com/thoughtbot/factory_bot_rails) for test data stubs
+  - [Faker](https://github.com/faker-ruby/faker) for generating fake test data
+  - [ShouldaMatchers](https://github.com/thoughtbot/shoulda-matchers) for quicker model tests
 
-* Database creation
+### Development Helpers
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- [Better Errors](https://github.com/BetterErrors/better_errors) for fancier error pages
+- [Pry](https://github.com/pry/pry) for better debugging
+- [StandardRB](https://github.com/testdouble/standard) for an opinionated linter
+- [Docker Compose](https://docs.docker.com/compose/) setup for PostgreSQL and Redis
