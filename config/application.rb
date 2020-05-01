@@ -33,5 +33,6 @@ module Fortress
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.view_component.preview_path = "#{Rails.root}/spec/components/previews"
   end
 end
