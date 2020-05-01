@@ -33,6 +33,11 @@ module Fortress
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # Default to dumping schema structure in raw SQL for more detail
+    config.active_record.schema_format = :sql
+
+    # Enable View::Component previews
     config.view_component.preview_path = "#{Rails.root}/spec/components/previews"
   end
 end
