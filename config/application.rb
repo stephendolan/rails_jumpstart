@@ -31,8 +31,17 @@ module Fortress
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
-    # Don't generate system test files.
-    config.generators.system_tests = nil
+    # Modify generator defaults
+    config.generators do |g|
+      g.system_tests = nil
+      g.stylesheets = nil
+      g.skip_routes = true
+      g.helper = nil
+      g.test_framework :rspec,
+        view_specs: false,
+        request_specs: false,
+        routing_specs: false
+    end
 
     # Default to dumping schema structure in raw SQL for more detail
     config.active_record.schema_format = :sql
