@@ -6,6 +6,10 @@ jobs:
   lint_and_test:
     runs-on: ubuntu-latest
 
+    env:
+      RAILS_ENV: test
+      PGPORT: ${{ job.services.postgres.ports[5432] }}
+
     services:
       postgres:
         image: postgres:12-alpine
@@ -30,15 +34,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gems-
 
-      - name: install PostgreSQL client
-        run: sudo apt-get install libpq-dev
-
-      - name: Build and create DB
-        env:
-          PGHOST: localhost
-          PGUSER: postgres
-          PGPORT: ${{ job.services.postgres.ports[5432] }}
-          RAILS_ENV: test
+      - name: Install dependencies
         run: |
           gem install bundler
           bundle config path vendor/bundle
@@ -48,10 +44,8 @@ jobs:
       - name: Lint - StandardRB
         run: bundle exec standardrb
 
+      - name: Build database
+        run: bin/rails db:setup
+
       - name: Run tests
-        env:
-          PGHOST: localhost
-          PGUSER: postgres
-          PGPORT: ${{ job.services.postgres.ports[5432] }}
-          RAILS_ENV: test
         run: bundle exec rspec
