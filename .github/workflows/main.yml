@@ -44,25 +44,30 @@ jobs:
         with:
           node-version: 12.x
 
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
       - uses: actions/cache@v1
+        id: yarn-cache
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-node-
+            ${{ runner.os }}-yarn-
 
       - name: Install dependencies
         run: |
           gem install bundler
           bundle config path vendor/bundle
           bundle install --jobs 4 --retry 3
-          npm install
+          yarn install
 
       - name: Lint - StandardRB
         run: bundle exec standardrb
 
       - name: Lint - Prettier
-        run: npm run prettier --check .
+        run: yarn run prettier --check .
 
       - name: Build database
         run: bin/rails db:setup
