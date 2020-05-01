@@ -39,14 +39,30 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gems-
 
+      - name: Set up NodeJS
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       - name: Install dependencies
         run: |
           gem install bundler
           bundle config path vendor/bundle
           bundle install --jobs 4 --retry 3
+          npm install
 
       - name: Lint - StandardRB
         run: bundle exec standardrb
+
+      - name: Lint - Prettier
+        run: npm run prettier --check .
 
       - name: Build database
         run: bin/rails db:setup
