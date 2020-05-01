@@ -1,13 +1,12 @@
 name: Main
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   lint_and_test:
     runs-on: ubuntu-latest
 
     env:
-      DATABASE_HOST: postgres
       RUBYOPT: -W:no-deprecated -W:no-experimental
       RAILS_ENV: test
 
@@ -16,6 +15,8 @@ jobs:
         image: postgres:12-alpine
         env:
           POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
