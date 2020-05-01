@@ -4,6 +4,8 @@ This repository contains the basic skeleton of a starter Rails app, including:
 
 ### Production features
 
+- [PostgreSQL](https://www.postgresql.org/)
+  - Extension - (citext)[https://www.postgresql.org/docs/current/citext.html]
 - [TypeScript](https://www.typescriptlang.org/) for safer JavaScript development
 - [StimulusJS](https://stimulusjs.org) for JavaScript sprinkles
 - [View::Component](https://github.com/github/view_component) for testable views
