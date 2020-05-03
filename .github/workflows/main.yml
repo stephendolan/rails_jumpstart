@@ -69,7 +69,7 @@ jobs:
         run: bundle exec standardrb
 
       - name: Lint - Prettier
-        run: yarn run prettier --check .
+        run: yarn run prettier . --check --ignore-path .gitignore
 
       - name: Build database
         run: bin/rails db:setup
