@@ -20,7 +20,7 @@ group :development, :test do
   gem "factory_bot_rails", "~> 5.2"
   gem "faker", "~> 2.11"
   gem "shoulda-matchers", "~> 4.3"
-  gem "standard", "~> 0.3"
+  gem "standard", "~> 0.4"
 end
 
 group :development do
