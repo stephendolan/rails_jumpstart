@@ -4,38 +4,49 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Run Docker",
+      "label": "Yarn Install",
       "type": "shell",
-      "command": "docker-compose up",
+      "command": "yarn install",
       "problemMatcher": [],
       "presentation": {
         "reveal": "silent",
-        "panel": "shared",
         "showReuseMessage": false,
         "clear": true,
-        "group": "Server"
+        "panel": "shared",
+        "group": "Installs"
       }
     },
     {
-      "label": "Run Server",
+      "label": "Bundle Install",
       "type": "shell",
-      "command": "bundle exec rails server",
+      "command": "bundle install",
       "problemMatcher": [],
       "presentation": {
         "reveal": "silent",
-        "panel": "shared",
         "showReuseMessage": false,
         "clear": true,
-        "group": "Server"
+        "panel": "shared",
+        "group": "Installs"
       }
     },
     {
-      "label": "Launch App",
-      "dependsOn": ["Run Docker", "Run Server"],
-      "runOptions": {
-        "runOn": "folderOpen"
-      },
-      "problemMatcher": []
+      "label": "Build",
+      "problemMatcher": [],
+      "dependsOrder": "parallel",
+      "dependsOn": ["Bundle Install", "Yarn Install"]
+    },
+    {
+      "label": "Server",
+      "type": "shell",
+      "command": "overmind start",
+      "dependsOn": ["Build"],
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "group": "Server"
+      }
     }
   ]
 }
