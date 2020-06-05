@@ -41,6 +41,9 @@
       "command": "overmind start",
       "dependsOn": ["Build"],
       "isBackground": true,
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
