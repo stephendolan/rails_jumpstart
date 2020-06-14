@@ -1,0 +1,7 @@
+#!/bin/bash
+
+overmind kill && pkill -f overmind
+[ -e .overmind.sock ] && rm .overmind.sock
+[ -e tmp/pids/server.pid ] && rm tmp/pids/server.pid
+
+exit 0;
