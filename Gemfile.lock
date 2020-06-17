@@ -218,7 +218,7 @@ GEM
     tzinfo (1.2.7)
       thread_safe (~> 0.1)
     unicode-display_width (1.7.0)
-    view_component (2.11.0)
+    view_component (2.11.1)
       activesupport (>= 5.0.0, < 7.0)
     webpacker (5.1.1)
       activesupport (>= 5.2)
