@@ -18,7 +18,7 @@ group :development, :test do
   gem "pry", "~> 0.13"
   gem "rspec-rails", "~> 4.0"
   gem "factory_bot_rails", "~> 6.0"
-  gem "faker", "~> 2.12"
+  gem "faker", "~> 2.13"
   gem "shoulda-matchers", "~> 4.3"
   gem "standard", "~> 0.4"
 end
