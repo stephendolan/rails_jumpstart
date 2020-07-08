@@ -17,7 +17,7 @@ group :development, :test do
   gem "capybara", "~> 3.33"
   gem "pry", "~> 0.13"
   gem "rspec-rails", "~> 4.0"
-  gem "factory_bot_rails", "~> 6.0"
+  gem "factory_bot_rails", "~> 6.1"
   gem "faker", "~> 2.13"
   gem "shoulda-matchers", "~> 4.3"
   gem "standard", "~> 0.4"
