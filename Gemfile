@@ -8,7 +8,7 @@ gem "bootsnap", "~> 1.4.8", require: false
 gem "rails", "~> 6.0.3"
 gem "pg", "~> 1.2.3"
 gem "puma", "~> 4.3.5"
-gem "webpacker", "~> 5.1.1"
+gem "webpacker", "~> 5.2.0"
 gem "turbolinks", "~> 5.2.1"
 gem "redis", "~> 4.2.1"
 gem "view_component", "~> 2.18"
