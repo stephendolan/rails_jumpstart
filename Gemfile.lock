@@ -220,7 +220,7 @@ GEM
     unicode-display_width (1.7.0)
     view_component (2.18.1)
       activesupport (>= 5.0.0, < 7.0)
-    webpacker (5.2.0)
+    webpacker (5.2.1)
       activesupport (>= 5.2)
       rack-proxy (>= 0.6.1)
       railties (>= 5.2)
@@ -256,7 +256,7 @@ DEPENDENCIES
   turbolinks (~> 5.2.1)
   tzinfo-data
   view_component (~> 2.18)
-  webpacker (~> 5.2.0)
+  webpacker (~> 5.2.1)
 
 RUBY VERSION
    ruby 2.7.1p83
