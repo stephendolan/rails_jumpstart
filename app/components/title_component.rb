@@ -1,5 +1,7 @@
 class TitleComponent < ViewComponent::Base
   def initialize(custom_title: nil)
+    super
+
     @custom_title = custom_title
   end
 
