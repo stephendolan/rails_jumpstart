@@ -218,7 +218,7 @@ GEM
     tzinfo (1.2.7)
       thread_safe (~> 0.1)
     unicode-display_width (1.7.0)
-    view_component (2.18.2)
+    view_component (2.19.0)
       activesupport (>= 5.0.0, < 7.0)
     webpacker (5.2.1)
       activesupport (>= 5.2)
@@ -255,7 +255,7 @@ DEPENDENCIES
   standard (~> 0.6)
   turbolinks (~> 5.2.1)
   tzinfo-data
-  view_component (~> 2.18)
+  view_component (~> 2.19)
   webpacker (~> 5.2.1)
 
 RUBY VERSION

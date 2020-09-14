@@ -11,7 +11,7 @@ gem "puma", "~> 4.3.6"
 gem "webpacker", "~> 5.2.1"
 gem "turbolinks", "~> 5.2.1"
 gem "redis", "~> 4.2.2"
-gem "view_component", "~> 2.18"
+gem "view_component", "~> 2.19"
 
 group :development, :test do
   gem "capybara", "~> 3.33"
