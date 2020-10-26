@@ -65,7 +65,7 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
-    bootsnap (1.4.8)
+    bootsnap (1.4.9)
       msgpack (~> 1.0)
     builder (3.2.4)
     capybara (3.33.0)
@@ -239,7 +239,7 @@ PLATFORMS
 DEPENDENCIES
   better_errors (~> 2.8)
   binding_of_caller (~> 0.8)
-  bootsnap (~> 1.4.8)
+  bootsnap (~> 1.4.9)
   capybara (~> 3.33)
   factory_bot_rails (~> 6.1)
   faker (~> 2.14)
