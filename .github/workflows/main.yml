@@ -27,10 +27,12 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
 
-      - name: Set up Ruby
-        uses: actions/setup-ruby@v1
+      - name: Setup Ruby, JRuby and TruffleRuby
+        # You may pin to the exact commit or the version.
+        # uses: ruby/setup-ruby@ba761ba8ff71a9113d3207595ceadac55aa09cef
+        uses: ruby/setup-ruby@v1.50.2
         with:
-          ruby-version: 2.7.1
+          bundler: Gemfile.lock
 
       - name: Cache Ruby gems
         uses: actions/cache@v1
