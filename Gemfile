@@ -10,7 +10,7 @@ gem "pg", "~> 1.2.3"
 gem "puma", "~> 5.0.4"
 gem "webpacker", "~> 5.2.1"
 gem "turbolinks", "~> 5.2.1"
-gem "redis", "~> 4.2.4"
+gem "redis", "~> 4.2.5"
 gem "view_component", "~> 2.22"
 
 group :development, :test do
