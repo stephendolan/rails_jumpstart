@@ -19,7 +19,7 @@ group :development, :test do
   gem "rspec-rails", "~> 4.0"
   gem "factory_bot_rails", "~> 6.1"
   gem "faker", "~> 2.15"
-  gem "shoulda-matchers", "~> 4.4"
+  gem "shoulda-matchers", "~> 4.5"
   gem "standard", "~> 0.11"
 end
 
