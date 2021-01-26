@@ -14,7 +14,7 @@ gem "redis", "~> 4.2.5"
 gem "view_component", "~> 2.25"
 
 group :development, :test do
-  gem "capybara", "~> 3.34"
+  gem "capybara", "~> 3.35"
   gem "pry", "~> 0.13"
   gem "rspec-rails", "~> 4.0"
   gem "factory_bot_rails", "~> 6.1"
