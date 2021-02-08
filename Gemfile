@@ -15,7 +15,7 @@ gem "view_component", "~> 2.25"
 
 group :development, :test do
   gem "capybara", "~> 3.35"
-  gem "pry", "~> 0.13"
+  gem "pry", "~> 0.14"
   gem "rspec-rails", "~> 4.0"
   gem "factory_bot_rails", "~> 6.1"
   gem "faker", "~> 2.15"
