@@ -7,7 +7,7 @@ ruby "2.7.2"
 gem "bootsnap", "~> 1.7.2", require: false
 gem "rails", "~> 6.1.3"
 gem "pg", "~> 1.2.3"
-gem "puma", "~> 5.2.1"
+gem "puma", "~> 5.2.2"
 gem "webpacker", "~> 5.2.1"
 gem "turbolinks", "~> 5.2.1"
 gem "redis", "~> 4.2.5"
